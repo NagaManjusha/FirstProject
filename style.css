@@ -1,0 +1,84 @@
+body {
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  font-family: 'Segoe UI', sans-serif;
+}
+.container {
+  margin-top: 30px;
+}
+.card {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #003366;
+}
+h5 {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+.card-header {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.btn-pink {
+  background-color: #ff4da6;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 10px 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn-pink:hover {
+  background-color: #e60073;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(255, 77, 166, 0.6);
+  cursor: pointer;
+}
+
+.btn-pink i {
+  margin-right: 8px;
+}
+
+.form-label {
+  font-weight: 500;
+}
+#statusResult, #feeResult, #paymentStatus {
+  padding: 10px;
+  border-radius: 5px;
+}
+.animated-heading {
+  display: inline-block;
+  padding: 10px 30px;
+  background: linear-gradient(-45deg, #6C63FF, #3F9AFF, #33FFA3, #FF63C3);
+  background-size: 300% 300%;
+  animation: gradientMove 6s ease infinite;
+  border-radius: 30px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.animated-heading h5 {
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+

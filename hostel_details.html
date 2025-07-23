@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hostel Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #dbeafe;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    .btn-pink {
+      background-color: #f72585;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn-pink:hover {
+      background-color: #d61e70;
+    }
+
+    .hostel-container {
+      background-color: #fff;
+      border-radius: 0;
+      padding: 2rem 1rem;
+      margin-bottom: 3rem;
+      width: 100%;
+    }
+
+    .hostel-container ul {
+      padding-left: 2rem;
+      text-align: left;
+    }
+
+    .hostel-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #1a1a20;
+      padding: 2rem 0;
+      color: #ccc;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ccc;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    .footer-icons i {
+      font-size: 1.5rem;
+      margin: 0 8px;
+      vertical-align: middle;
+    }
+
+    iframe {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h2><i class="fas fa-university"></i> Sri Vasavi Engineering College, Tadepalligudem</h2>
+    <button class="btn btn-pink" onclick="window.location.href='index.html'" data-bs-toggle="tooltip" title="Go back to the hostel form page">
+      <i class="fas fa-arrow-left"></i> Back to Allotment Form
+    </button>
+  </div>
+
+  <!-- Hostel Section -->
+  <div class="hostel-container">
+    <h4 class="text-center"><i class="fas fa-building"></i> Hostel Details</h4>
+    <ul>
+      <li>Separate hostels for Boys & Girls</li>
+      <li>Approx. 500 students per hostel</li>
+      <li>Rooms: 2‑ or 3‑sharing</li>
+      <li>Facilities: Wi‑Fi, Security, Study Rooms, Coolers</li>
+      <li>Mess: Breakfast, Lunch, Snacks, Dinner</li>
+      <li>Annual Fee Range: ₹70,000 to ₹1,00,000</li>
+    </ul>
+
+    <div class="row text-center mt-4">
+      <div class="col-md-6 col-12 mb-3">
+        <img class="hostel-img" src="https://tse3.mm.bing.net/th/id/OIP.6CJHrJk4NvjvGQ3IZX0AsAHaFL?pid=Api&P=0&h=180" alt="Boys Hostel">
+        <p>Boys Hostel</p>
+      </div>
+      <div class="col-md-6 col-12 mb-3">
+        <img class="hostel-img" src="girls_hostel.png" alt="Girls Hostel">
+        <p>Girls Hostel</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+
+      <!-- Social Media -->
+      <div class="footer-icons mb-3">
+        <a href="https://www.instagram.com/vasavianss_officiall" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://srivasaviengg.ac.in" target="_blank"><i class="fab fa-google"></i></a>
+        <a href="https://www.youtube.com/@srivasavienggcollege" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <!-- Footer Nav Buttons -->
+      <div class="mb-3">
+        <button class="btn btn-outline-light mx-2" onclick="window.open('https://srivasaviengg.ac.in/hostels.php', '_blank')">About Us</button>
+        <button class="btn btn-outline-light mx-2" onclick="toggleSection('contact-details')">Contact Us</button>
+        <button class="btn btn-outline-light mx-2" onclick="toggleSection('location-details')">Location</button>
+      </div>
+
+      <!-- Contact Details -->
+      <div id="contact-details" class="mt-3" style="display: none;">
+        <h5>Sri Vasavi Engineering College, Tadepalligudem</h5>
+        <p>📞 <a href="tel:+918818284355" style="color: #fff;">08818 – 284355</a></p>
+        <p>📞 <a href="tel:+918818284344" style="color: #fff;">08818 – 284344</a></p>
+        <p>📞 <a href="tel:+918818284544" style="color: #fff;">08818 – 284544</a></p>
+        <p>📱 <a href="tel:+919848135851" style="color: #fff;">+91 98481 35851</a></p>
+        <p>📱 <a href="tel:+919989052582" style="color: #fff;">+91 99890 52582</a></p>
+        <p>✉️ <a href="mailto:principal@srivasaviengg.ac.in" style="color: #fff;">principal@srivasaviengg.ac.in</a></p>
+      </div>
+
+      <!-- Location Details -->
+      <div id="location-details" class="mt-4" style="display: none;">
+        <h5>Location</h5>
+        <p>Sri Vasavi Engineering College, Pedatadepalli, Tadepalligudem, Andhra Pradesh 534101</p>
+        <div style="max-width: 100%; height: 300px; margin-top: 1rem;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.680036240493!2d81.49395771485266!3d16.83474638839688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37e4b233a1cf1b%3A0x55366a6a6c61c623!2sSri%20Vasavi%20Engineering%20College!5e0!3m2!1sen!2sin!4v1650190730386"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <p class="mt-4">© 2025 Naga Manjusha. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toggle Section Script -->
+  <script>
+    function toggleSection(id) {
+      const contact = document.getElementById("contact-details");
+      const location = document.getElementById("location-details");
+      contact.style.display = "none";
+      location.style.display = "none";
+      const sel = document.getElementById(id);
+      if (sel) sel.style.display = "block";
+    }
+  </script>
+
+  <!-- Enable Tooltip -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
+
+</body>
+</html>

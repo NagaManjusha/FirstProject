@@ -1,0 +1,109 @@
+<!-- Student Registration -->
+<div class="card">
+  <div class="card-header bg-info text-white"><i class="fas fa-user-plus"></i> Student Registration</div>
+  <div class="card-body">
+    <form id="studentForm" onsubmit="registerStudent(event)">
+      <div class="row">
+        <div class="col-md-6 mb-3"><label class="form-label">Name</label><input type="text" class="form-control" name="name" required></div>
+        <div class="col-md-6 mb-3"><label class="form-label">Email</label><input type="email" class="form-control" name="email" required></div>
+        <div class="col-md-6 mb-3"><label class="form-label">Gender</label><select name="gender" class="form-select" required>
+            <option value="">Select Gender</option><option>Male</option><option>Female</option><option>Other</option></select></div>
+        <div class="col-md-6 mb-3"><label class="form-label">Year</label><select name="year" class="form-select">
+            <option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option></select></div>
+
+        <!-- City Dropdown -->
+        <div class="col-md-6 mb-3">
+          <label class="form-label">City</label>
+          <select class="form-select" name="city" required>
+            <option value="">Select City</option>
+            <option>Hyderabad</option>
+            <option>Vijayawada</option>
+            <option>Visakhapatnam</option>
+            <option>Guntur</option>
+            <option>Rajahmundry</option>
+            <option>Tadepalligudem</option>
+            <option>Nellore</option>
+            <option>Eluru</option>
+            <option>Ongole</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <!-- Country Dropdown -->
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Country</label>
+          <select class="form-select" name="country" required>
+            <option value="">Select Country</option>
+            <option>India</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Canada</option>
+            <option>Australia</option>
+            <option>Germany</option>
+            <option>France</option>
+            <option>Japan</option>
+            <option>China</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <!-- Phone Numbers -->
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Phone Number</label>
+          <input type="text" class="form-control" name="phone" maxlength="10" pattern="\d{10}" title="Enter 10 digit phone number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Parent's Phone Number</label>
+          <input type="text" class="form-control" name="parentPhone" maxlength="10" pattern="\d{10}" title="Enter 10 digit phone number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+        </div>
+
+        <div class="col-md-6 mb-3"><label class="form-label">Distance from College (km)</label><input type="number" class="form-control" name="distance" required></div>
+        <div class="col-md-6 mb-3"><label class="form-label">Room Preference</label><select name="room_type" class="form-select">
+            <option>Single - AC</option><option>Single - Non-AC</option><option>Shared - AC</option><option>Shared - Non-AC</option></select></div>
+      </div>
+      <button type="submit" class="btn btn-info text-white w-100">Apply</button>
+    </form>
+  </div>
+</div>
+
+<!-- Check Allotment Status -->
+<div class="card">
+  <div class="card-header bg-primary text-white"><i class="fas fa-info-circle"></i> Check Allotment Status</div>
+  <div class="card-body">
+    <form onsubmit="checkStatus(event)">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control mb-3" id="checkEmail" required>
+      <button type="submit" class="btn btn-primary">Check Status</button>
+      <div id="statusResult" class="mt-3"></div>
+    </form>
+  </div>
+</div>
+
+<!-- Fee Calculator -->
+<div class="card">
+  <div class="card-header bg-warning text-white"><i class="fas fa-rupee-sign"></i> Hostel Fee Calculator</div>
+  <div class="card-body">
+    <form onsubmit="calculateFee(event)">
+      <label class="form-label">Room Type</label>
+      <select id="roomType" class="form-select mb-3">
+        <option>Single - AC</option><option>Single - Non-AC</option><option>Shared - AC</option><option>Shared - Non-AC</option>
+      </select>
+      <button type="submit" class="btn btn-warning">Calculate</button>
+      <div id="feeResult" class="mt-2"></div>
+    </form>
+    <div id="paymentForm" style="display: none;">
+      <form onsubmit="processPayment(event)">
+        <label class="form-label mt-3">Card Holder Name</label>
+        <input type="text" class="form-control" required>
+        <label class="form-label mt-2">Card Number</label>
+        <input type="text" class="form-control" maxlength="16" required>
+        <div class="row mt-2">
+          <div class="col-md-6"><label class="form-label">Expiry Date</label><input type="month" class="form-control" required></div>
+          <div class="col-md-6"><label class="form-label">CVV</label><input type="password" class="form-control" maxlength="3" required></div>
+        </div>
+        <button type="submit" class="btn btn-success mt-3 w-100">Pay Now</button>
+      </form>
+      <div id="paymentStatus" class="mt-2 text-success fw-bold"></div>
+    </div>
+  </div>
+</div>
